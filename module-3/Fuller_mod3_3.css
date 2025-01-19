@@ -1,0 +1,42 @@
+/*
+Brett Fuller
+CSD-340 - Assignment 3.3
+1/19/25
+*/
+h1{
+    text-align: center;
+}
+h3{
+    font-weight: 500;
+}
+#left{
+    float: left;
+}
+#right{
+    float: right;
+}
+#left, #right{
+    width: 45%;
+    border-color: red;
+    border-radius: 15px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+}
+#bottom{
+    /* feels like margin is too large because you have to scroll to see the links but following assignment 
+    with some trial and error I found 35% looked best on my laptop screen*/
+    margin-top: 60%;
+    float: right;
+    margin-bottom: 20px;
+}
+ul{
+    list-style-type: upper-roman;
+}
+li{
+    font-weight: 300;
+}
+a:hover{
+    /* doesn't seem to do anything since link is already underlined but following instructions. */
+    text-decoration: underline;
+}
