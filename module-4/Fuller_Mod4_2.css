@@ -1,0 +1,44 @@
+/*
+Brett Fuller
+CSD-340 - Assignment 4.2
+1/24/25
+*/
+h1, h3{
+    text-align: center;
+}
+#image-gallery{
+    display: grid;
+    margin-top: 10%;
+}
+#left{
+    grid-column: 1;
+}
+#center{
+    grid-column: 2;
+}
+#right{
+    grid-column: 3;
+}
+#left, #center, #right{
+    /*added borders to match the page screenshot even though I could not find them listed in the instructions 
+    */
+    border-color: rgb(255, 115, 0);
+    border-width: 2px;
+    border-style: solid;
+}
+figure{
+    text-align: center;
+    font-style: italic;
+    font-size: .75em;
+}
+img{
+    width: 40%;
+}
+#bottom{
+    margin-top: 60%;/*Still don't love the amount of white space addid here for the view on my laptop. */
+    float: right;
+    margin-bottom: 20px;
+}
+h1, h3,figure{
+    color:  rgb(82, 131, 147);
+}
