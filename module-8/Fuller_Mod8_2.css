@@ -1,0 +1,117 @@
+/*
+Brett Fuller
+CSD-340 - Assignment 8.2
+2/8/25
+*/
+
+/*
+Followed instructions for the website but went ahead and followed my style guide for the biosite project to
+have a common aesthetic.
+*/
+footer{
+    background-color: #6886c2;
+    position: fixed;
+    left: 0;
+    font-weight: 400;
+    padding-right: 10px;
+    font-style: italic;
+    bottom: 0;
+    width: 100%;
+    float: right;
+}
+header{
+    background-color: #6886c2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+h1{
+    font-weight: 400;
+}
+#navbar{
+    overflow: hidden;
+    background-color: #6886c2;
+    border-bottom-style: solid;
+    border-bottom-width: 15px;
+    border-bottom-color: #E5bb3c;
+}
+#navbar a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#navbar a:hover{
+    background-color: #E67f53;
+    color: #1d15e6;
+}
+#container{
+    margin: 2% 5% 5% 100px;
+    padding: 10px;
+}
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 50%;
+}
+.card-title{
+    text-align: center;
+    font-size: 2em;
+    color: #901d37;
+    font-weight: 400;
+}
+.card-content{
+    padding: 2px 16px;
+}
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+footer p{
+    color: white;
+    font-weight: 400;
+    float: right;
+    padding-right: 10px;
+    font-style: italic;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+.left-side{
+    float: left;
+    width: 50%;
+    max-width: 100px;
+    display: block;
+}
+/*CSS additions so that the Copyright text is on the left side.
+*/
+#left{
+    float: left;
+}
+#movies{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+td{
+    border-style: solid;
+    border-color: #ddd;
+    border-width: 1px;
+    padding: 8px;
+}
+/*Added the following CSS to have a top banner similar to the example picture. This was not listed in the assignment
+as far as I can tell but since your example had it and I thought it looked better this way I added it. */
+.headings{
+    background-color: #6886c2;
+    color: white;
+}
