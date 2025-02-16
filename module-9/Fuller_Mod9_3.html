@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- Brett Fuller - Assignment 9.3 -->
+
+<html lang="en">
+    <head>
+        <title>CSD 340 Development with HTML and CSS</title>
+        <link href="Fuller_Mod9_3.css" type="text/css" rel="stylesheet" >
+        <meta charset="UTF-8">
+        <meta name="description" content="Assignment 9.3: JavaScript - Part 1" >
+        <meta name="keywords" content="CSS, HTML, CSD340" >
+        <meta name="author" content="Brett Fuller">
+        <!--Variables for each of the names in my paragraphs-->
+        <script>
+            var me = "Brett";
+        </script>
+        <script>
+            var wife = "Jenny";
+        </script>
+        <script>
+            var oldest = "Henry"
+        </script>
+        <script>
+            var youngest = "Hudson"
+        </script>
+    </head>
+
+    <body>
+        <div id="container">
+            <h1>Assignment 9.3 – JavaScript - Part 1</h1>
+            <h2>Chapter 1: My Story - Brett Fuller</h2>
+            <!--Added spans around each person's name in the following paragraphs and changed them to underscores-->
+            <p id="p1" class="intro MyStory">
+                Hello, my name is <span class="blank" id="me">_____</span> from Omaha, Nebraska. I have been working in IT for almost 20 years and over time 
+                I have come to enjoy the  parts of my job that involve programming far more than any of the others. 
+                As a result, here I am now attending Bellevue University attempting to learn how to program the correct way, 
+                instead of piecing together random pieces of information on the internet to put something together that feels 
+                like it is held together with shoe strings and bubble gum.
+            </p>
+            <p id="p2" class="MyStory">
+                <span class="sentence">I am happily married to my wife <span class="blank" id="wife">_____</span> and a father of two young boys.</span> 
+                My oldest, <span class="blank" id="oldest">_______</span>, is 7 years old and is really into sports and video games. 
+                <Span class="blank" id="youngest">_______</Span>, my 5 year old, loves playing with toys and is a natural collector. 
+            </p>
+            <p id="p3" class="MyStory">
+                I am not currently employed because I knew that if I tried to do work, school, and be a good dad at
+                the same time one of those things would end up getting a lot less attention than the others.
+                I am also pretty sure that because kids do not have solid deadlines it would be my kids and that ended up 
+                getting the least attention and did not seem fair to them. So instead I spend a lot of time running my kids
+                 back and forth to school, swimming lessons, and helping to coach their baseball / tee ball teams, while 
+                 just hanging out to watch them in other sports and practices. 
+            </p>
+            <p id="p4" class="MyStory">
+                For hobbies I like to play a lot of golf, even though I am bad at it. I have always loved video 
+                games since I was a small child, but I find it hard to find the time to play them as much as I 
+                would like, so most of my engagement with games these days comes from podcasts and online videos. 
+                Recently I have become obsessed with pickleball, and while I am struggling to find time to play 
+                video games I find myself playing pickleball multiple times a week. 
+            </p>
+            <!--Added a button for each name in the paragraphs clicking a button replares the corresponding
+            ____ with the correct name.-->
+            <p>
+                <button type="button"
+                  onclick="document.getElementById('me').innerHTML = me">Brett</button> <br />   
+            </p> 
+            <p>
+                <button type="button"
+                  onclick="document.getElementById('wife').innerHTML = wife">Jenny</button> <br />   
+            </p> 
+            <p>
+                <button type="button"
+                  onclick="document.getElementById('oldest').innerHTML = oldest">Henry</button> <br />   
+            </p> 
+            <p>
+                <button type="button"
+                  onclick="document.getElementById('youngest').innerHTML = youngest">Hudson</button> <br />   
+            </p>
+            <hr><!--Removed the trailing / because the html checker yelled about it-->
+            <address id="a1">
+                <p>
+                    <a href="https://www.bellevue.edu/">Bellevue University</a><br>
+                    1000 Galvin Road South <br>
+                    Bellevue, Nebraska 68005
+                    <br>
+                    <a href="../index.html">Back to Landing Page</a>
+                    <br>
+                </p>
+            </address> 
+        </div>
+            
+        
+    </body>
+</html>
