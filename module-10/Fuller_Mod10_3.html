@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Brett Fuller - Assignment 10.3 -->
+
+<html lang="en">
+    <head>
+        <title>CSD 340 Development with HTML and CSS</title>
+        <link href="Fuller_Mod10_3.css" type="text/css" rel="stylesheet" >
+        <!--Script to change background color accepts the color to change it to-->
+        <script>
+            function changeBackground(color) {
+              document.getElementById("body").style.backgroundColor = color;
+            }
+        </script>
+        <!--Script to change the image color, accepts the elementId, and the filename-->
+        <script>
+            function changeImage(elementId, imageFile){
+                var henry_shooting_basketball =document.getElementById(elementId);
+                henry_shooting_basketball.src = imageFile;
+            }
+        </script>
+
+    </head>
+
+    <body id="body">
+        <header>
+            <h1>Assignment 10.3: JavaScript - Part 2</h1>
+        </header>
+        <div id="navbar"></div>
+        <div id="container">
+            <h2>Hover over an image to see what happens next</h2>
+            <!--resets background color to white-->
+            <h3 onclick="changeBackground('white')">Click an image to change the background color</h3>
+            <!--rows and columns to align images (nearly) side by side-->
+            <div class="row">
+                <div class="column">
+                    <!--calls script to change the image file-->
+                    <img id="henry_holding_basketball" onclick="changeBackground('lightblue')" onmouseover="changeImage('henry_holding_basketball', 'images/BasketballShot.jpeg')"
+                    onmouseleave="changeImage('henry_holding_basketball', 'images/henry_holding_basketball.jpeg')" src="images/henry_holding_basketball.jpeg" alt="Henry Holding a Basketball">
+                </div>
+                <div class="column">
+                    <!--calls script to change the image file-->
+                    <img id="henry_baseball_scoring" onclick="changeBackground('darkolivegreen')" onmouseover="changeImage('henry_baseball_scoring', 'images/HenryBaseballStare.jpeg')" 
+                    onmouseleave="changeImage('henry_baseball_scoring','images/HenryBaseballScoring.JPG')" src="images/HenryBaseballScoring.JPG" alt="Henry scoring a run in baseball">
+                </div>
+            </div>
+            
+        </div>
+        <footer>
+            <p id="left">
+                Copyright 2025 - Fuller
+            </p>
+            <p>
+                <a href="../index.html">Back to Landing Page</a>
+            </p>           
+        </footer>    
+    </body>
+</html>

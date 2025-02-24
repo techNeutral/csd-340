@@ -1,0 +1,101 @@
+/*
+Brett Fuller
+CSD-340 - Assignment 10.3
+2/23/25
+*/
+
+/*
+Followed instructions for the website but went ahead and followed my style guide for the biosite project to
+have a common aesthetic.
+*/
+footer{
+    background-color: #6886c2;
+    position: fixed;
+    left: 0;
+    font-weight: 400;
+    padding-right: 10px;
+    font-style: italic;
+    bottom: 0;
+    width: 100%;
+    float: right;
+}
+header{
+    background-color: #6886c2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+h1{
+    font-weight: 400;
+}
+#navbar{
+    overflow: hidden;
+    background-color: #6886c2;
+    border-bottom-style: solid;
+    border-bottom-width: 15px;
+    border-bottom-color: #E5bb3c;
+}
+#container{
+    margin: 2% 5% 5% 100px;
+    padding: 10px;
+}
+footer p{
+    color: white;
+    font-weight: 400;
+    float: right;
+    padding-right: 10px;
+    font-style: italic;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+/*CSS additions so that the Copyright text is on the left side.
+*/
+#left{
+    padding-left: 10px;
+    float: left;
+}
+th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+td{
+    border-style: solid;
+    border-color: #ddd;
+    border-width: 1px;
+    padding: 8px;
+}
+/*Added the following CSS to have a top banner similar to the example picture. This was not listed in the assignment
+as far as I can tell but since your example had it and I thought it looked better this way I added it. */
+.headings{
+    background-color: #6886c2;
+    color: white;
+}
+img{
+    width: 90%;
+}
+.row {
+    display: flex;
+}
+  
+.column {
+flex: 50%;
+padding: 5px;
+justify-content: center;
+}
+
+h2, h3{
+    text-align: center;
+}
+
+h2:hover{
+    color:darkgray
+}
+h3:hover{
+    text-decoration: underline;
+}
