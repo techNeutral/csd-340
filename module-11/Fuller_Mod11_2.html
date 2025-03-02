@@ -1,0 +1,95 @@
+<!-- 
+Brett Fuller
+CSD-340 Module 11.2 
+ 3/1/25
+-->
+ <!--This is a simple todo list utilizing HTML and Javascript -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSD 340 Web Development with HTML and CSS</title>
+        <link href="site.css" type="text/css" rel="stylesheet" >
+        <script>
+            var tasks = [];
+            function addTask(){
+                const inputValue = document.getElementById("taskInput").value;
+                tasks.push(inputValue);
+                //chose to use the value corresponding with the way that the element shows up in the todo list rather than it's location in the array.
+                const length = tasks.length;
+                document.getElementById("taskInput").value = "";
+                //display an annoying alert that needs to be dismissed notifying the user they added a task.  I would immediately change products if this was the actual workflow
+                //in a working todo list.
+                const alertMessage = inputValue + " has been added to the todo list at location " + length + ".";
+                window.alert(alertMessage)
+            }
+
+            
+        </script>
+        <script>
+            //function that creates an unordered list and add the elements from the array of tasks as list elements to the unordered list. They are then displayed in an empty div.
+            function displayList(){
+                //Clear any information in the div so that I don't have multiple versions of the list on screen
+                clearBox("taskDiv")
+                //create teh unordered list
+                const myList = document.createElement("ul");
+                //separate iterator to display the lists counting up starting at 1 instead of 0
+                let j = 1;
+                //looping structure to add all list elements to the unordered list with a descriptor of its location using the j iterator
+                for (let i = 0; i < tasks.length; i++){
+                    const newItem = document.createElement("li");
+                    var arrayValue = "Item" + j + ": " + tasks[i];
+                    const textNode = document.createTextNode(arrayValue);
+                    // Append the text node to the <li>
+                    newItem.appendChild(textNode);
+                    myList.appendChild(newItem);
+                    j++;
+                }
+                //place list in the taskDiv div
+                document.getElementById("taskDiv").appendChild(myList);
+            }
+        </script>
+        <script> 
+            //removes previous versions of the tasklist from the taskDiv
+            function clearBox(elementID) { 
+                var div = document.getElementById(elementID); 
+                 
+                while(div.firstChild) { 
+                    div.removeChild(div.firstChild); 
+                } 
+            } 
+        </script>
+        <script>
+            //function to remove the last element of an array.
+            function removeLastEntry(){
+                tasks.pop();
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Assignment 11.2: JavaScript - Part 3</h1>
+        </header>
+        <div id="container">
+            <p>This is my interactive ToDo list. Enter your task in the text box and click add to add a task! 
+                Click Display to show your ToDo list items! Click Delete last item to remove the last task added to the list</p>
+            <input type="text" id="taskInput">
+            <button id="add" onclick="addTask()">Add</button>
+            <button id="delete" onclick="removeLastEntry()">Delete Last Entry</button>
+            <button id="display" onclick="displayList()">Display</button>
+            <ul id="taskList">
+
+            </ul>
+            <div id="taskDiv">
+
+            </div>
+
+
+        </div>
+        <footer>
+            <p>
+                <a href="../index.html">Back to Landing Page</a>
+            </p>           
+        </footer>
+    
+    </body>
+</html>
