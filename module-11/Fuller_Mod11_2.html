@@ -37,7 +37,7 @@ CSD-340 Module 11.2
                 //looping structure to add all list elements to the unordered list with a descriptor of its location using the j iterator
                 for (let i = 0; i < tasks.length; i++){
                     const newItem = document.createElement("li");
-                    var arrayValue = "Item" + j + ": " + tasks[i];
+                    var arrayValue = "Item " + j + ": " + tasks[i];
                     const textNode = document.createTextNode(arrayValue);
                     // Append the text node to the <li>
                     newItem.appendChild(textNode);
