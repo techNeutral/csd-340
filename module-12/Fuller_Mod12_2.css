@@ -1,7 +1,8 @@
 /*
 Brett Fuller
-CSD-340 - Assignment 3.3
-1/19/25
+CSD-340 - Assignment 12.2
+3/6/25
+Matched theme of biosite and the last several pages for heder and footer elements for consistency.
 */
 footer{
     position: relative;
@@ -17,7 +18,7 @@ footer{
 header{
     position: absolute;
     background-color: #6886C2;
-    color: #901D37;
+    color: white;
     padding: 20px;
     text-align: center;
     left: 0;
@@ -79,5 +80,5 @@ footer p{
     font-style: italic;
 }
 footer a{
-    color: #901D37;
+    color: white;
 }
