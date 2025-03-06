@@ -1,0 +1,104 @@
+<!-- 
+Brett Fuller
+CSD-340 Assignment 12.2 
+ 3/3/25
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSD 340 Web Development with HTML and CSS</title>
+        <link href="Fuller_Mod12_2.css" type="text/css" rel="stylesheet" >
+        <script>
+            var tasks = ["Three Body Problem", "Station 11","Reamde","The Martian","The Will of The Many","The Lies of Loch Lamora",
+            "Change Agent", "The Name of the Wind", "Seveneves","Wind and Truth"];
+            //function that creates an unordered list and add the elements from the array of tasks as list elements to the unordered list. 
+            // They are then displayed in an empty div Counting up from 1 - 10.
+            function CountUp(){
+                //Clear any information in the div so that I don't have multiple versions of the list on screen
+                clearBox("books")
+                //create teh unordered list
+                const myList = document.createElement("ul");
+                //separate iterator to display the lists counting up starting at 1 instead of 0
+                let j = 1;
+                //looping structure to add all list elements to the unordered list with a descriptor of its location using the j iterator
+                for (let i = 0; i < tasks.length; i++){
+                    const newItem = document.createElement("li");
+                    var arrayValue = j + ". " + tasks[i];
+                    const textNode = document.createTextNode(arrayValue);
+                    // Append the text node to the <li>
+                    newItem.appendChild(textNode);
+                    myList.appendChild(newItem);
+                    j++;
+                }
+                //place list in the books div
+                document.getElementById("books").appendChild(myList);
+            }
+             //function that creates an unordered list and add the elements from the array of tasks as list elements to the unordered list. 
+            // They are then displayed in an empty div Counting down from 10 - 1.
+            function CountDown(){
+                //Clear any information in the div so that I don't have multiple versions of the list on screen
+                clearBox("books")
+                //create teh unordered list
+                const myList = document.createElement("ul");
+                //separate iterator to display the lists counting up starting at 1 instead of 0
+                let j = 10;
+                //looping structure to add all list elements to the unordered list with a descriptor of its location using the j iterator
+                for (let i = (tasks.length - 1); i > -1; i--){
+                    const newItem = document.createElement("li");
+                    var arrayValue = j + ". " + tasks[i];
+                    const textNode = document.createTextNode(arrayValue);
+                    // Append the text node to the <li>
+                    newItem.appendChild(textNode);
+                    myList.appendChild(newItem);
+                    j--;
+                }
+                //place list in the books div
+                document.getElementById("books").appendChild(myList);
+            }
+        </script>
+        <script> 
+            //removes previous versions of the tasklist from the books div
+            function clearBox(elementID) { 
+                var div = document.getElementById(elementID); 
+                    
+                while(div.firstChild) { 
+                    div.removeChild(div.firstChild); 
+                } 
+            } 
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Assignment 12.2: JavaScript - Part 4</h1>
+        </header>
+        <div id=container>
+            <div id="left">
+                <h3>Top 10 Favorite Books</h3>
+                <button id="Count Down" onclick="CountDown()">Count Down</button>
+                <button id="Count Up" onclick="CountUp()">Count Up</button>
+                <!--Empty Div to display list of books so I do not accidentally clear elements from other areas.-->
+                <hr>
+                <div id="books">
+
+                </div>
+            </div>
+            <div id="right">
+                <h3>5 Things I’ve Learned Since the Course Started</h3>
+                <ul id="roman">
+                    <li>How to create an unordered list.</li>
+                    <li>How to create an ordred list.</li>
+                    <li>How to set two Divs side by side.</li>
+                    <li>How to create a page in github pages.</li>
+                    <li>How to assign an id to an html element and address it in CSS.</li>
+                </ul>
+            </div>
+            <footer>
+                    <p>
+                        <a href="../index.html">Back to the Landing Page</a>
+                    </p>
+            </footer>
+  
+        </div>     
+    </body>
+</html>
